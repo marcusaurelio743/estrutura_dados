@@ -1,5 +1,7 @@
 package estruturaVetor;
 
+import java.util.Arrays;
+
 public class Vetor {
 	private String[] elementos;
 	private int tamanho;
@@ -27,6 +29,25 @@ public class Vetor {
 			return false;
 		}
 	}
+	
+	public int getTamanho() {
+		return this.tamanho;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder s = new StringBuilder();
+		s.append("[");
+		
+		for(int i=0; i < getTamanho(); i++) {
+			s.append(elementos[i]);
+			s.append(" ");
+		}
+		s.append("]");
+		return  s.toString() ;
+	}
+	
+	
 	
 	
 
